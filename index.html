@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Listas de Compras</title>
+    <link rel="stylesheet" href="style_1.css"> </head>
+<body>
+    <div class="container">
+        <h1>Minhas Listas de Compras</h1>
+
+        <div class="list-management">
+            <h3>Gerenciar Listas</h3>
+            <input type="text" id="newListInput" placeholder="Adicionar nova lista (ex: Mercado, Farmácia)">
+            <button id="addListButton">Criar Lista</button>
+        </div>
+
+        <div class="lists-container" id="listsContainer">
+            </div>
+
+        <div class="current-list-view" id="currentListView" style="display: none;">
+            <h2 id="currentListName"></h2>
+            <div class="item-input">
+                <input type="text" id="newItemInput" placeholder="Adicionar novo item...">
+                <button id="addItemButton">Adicionar Item</button>
+            </div>
+            <div class="filters">
+                <button id="filterAll" class="active">Todas</button>
+                <button id="filterActive">Ativas</button>
+                <button id="filterCompleted">Concluídas</button>
+            </div>
+            <ul id="itemsList">
+                </ul>
+            <button id="clearCompletedButton" style="display: none;">Limpar Concluídos</button> 
+			<button id="backToListsButton">Voltar para Listas</button>
+        </div>
+    </div>
+
+    <script src="script_1.js"></script>
+</body>
+</html>
+
