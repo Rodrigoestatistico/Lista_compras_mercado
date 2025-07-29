@@ -37,6 +37,19 @@ h3 {
     margin-bottom: 30px;
 }
 
+/* novo */
+.list-management input[type="text"] {
+    width: 30%;  /* ou um valor fixo como 200px */
+    max-width: none;  /* opcional: remove limite anterior */
+}
+
+/* novo */
+.list-management button {
+    width: 20%;  /* ou valor fixo como 100px */
+    padding: 8px;
+}
+
+
 input[type="text"] {
     flex-grow: 1;
     padding: 8px 12px;
@@ -72,16 +85,34 @@ button:hover {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease;
+	position: relative; /* Adicione esta linha para posicionar o pseudo-elemento */
+    padding-left: 35px; /* Adicione este padding para dar espaço ao ícone */
 }
 
 .list-card:hover {
     background-color: #5db8f0;
 }
 
-.list-card span {
+
+/* Adicione esta nova regra para o símbolo '+' */
+.list-card::before {
+    content: '\002B'; /* Caractere Unicode para o sinal de mais básico '+' */
+    /* Você também pode usar '\2795' para um 'heavy plus sign' (➕) ou Font Awesome se estiver usando */
+    position: absolute; /* Posicionamento absoluto dentro do .list-card */
+    left: 10px; /* Distância da borda esquerda */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralização exata */
+    font-size: 1.2rem; /* Tamanho do ícone */
+    color: #007bff; /* Cor do ícone (azul) */
+    font-weight: bold; /* Deixa o símbolo mais visível */
+}
+
+
+.list-card span. list-name-display { /* Adicionei a classe ao seletor para mais especificidade */
     font-weight: bold;
     color: #333;
     flex-grow: 1;
+	/* Remover padding: 5px 0; se ele estiver causando espaço indesejado após o ajuste do ícone */
 }
 
 .list-card .delete-list-button {
